@@ -1,0 +1,15 @@
+services:
+  cdk-ts:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # ビルド変数として作業ディレクトリ名を渡す
+      args:
+        - APP_DIR=cdk
+    # コンテナ継続起動
+    tty: true
+    environment:
+      - AWS_PROFILE={AWSのプロファイル名}
+    volumes:
+      - ./cdk:/cdk
+      - {ローカルユーザディレクトリ}/.aws/credentials:/root/.aws/credentials:ro
