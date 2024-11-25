@@ -13,7 +13,8 @@ RUN npm install -g typescript aws-cdk
 
 # 環境セットアップ
 WORKDIR /cdk
+COPY ./cdk/package*.json .
 # COPY package* .
-# RUN npm ci
+RUN npm ci
 
 # COPY ./${APP_DIR} .
