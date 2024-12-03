@@ -14,6 +14,26 @@ docker compose build
 
 docker-compose up -d
 
+## コンテナ起動（ローカル用ファイル使用）
+
+docker-compose -f docker-compose-local.yml up -d
+
 ## ターミナルログイン
 
 docker compose exec cdk-ts bash
+
+## コンテナ停止
+
+docker-compose stop
+
+## コンテナ停止&削除
+
+docker-compose down
+
+## リソース展開
+
+cdk deploy
+
+## リソース削除
+
+cdk destroy --all
