@@ -9,7 +9,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN unzip awscliv2.zip && ./aws/install
 RUN npm install -g typescript aws-cdk
 # 不要ファイル削除
-RUN rm -rf awscliv2.zip aws && apt-get purge -y curl unzip &&  apt-get clean &&  rm -rf /var/lib/apt/lists/*
+RUN rm -rf awscliv2.zip aws && apt-get purge -y unzip &&  apt-get clean &&  rm -rf /var/lib/apt/lists/*
 
 # 環境セットアップ
 WORKDIR ${APP_DIR}

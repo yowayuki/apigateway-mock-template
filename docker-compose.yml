@@ -12,4 +12,4 @@ services:
       - AWS_PROFILE={AWSのプロファイル名}
     volumes:
       - ./cdk:/cdk
-      - {ローカルユーザディレクトリ}/.aws/:/root/.aws:ro
+      - /{ローカルユーザディレクトリ}/.aws/:/root/.aws:ro
