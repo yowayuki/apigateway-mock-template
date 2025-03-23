@@ -142,7 +142,7 @@ export class MockApiStack extends cdk.Stack {
     #set($context.requestOverride.path.body = $input.body)
     #set($cookieUserNumber = $input.params().header.get('Cookie').replaceAll("userNumber=", ""))
     #set($bodyUserName= $util.parseJson($input.body).userName)
-    #if(($cookieUserNumber ==  "123") && ($bodyUserName.length() > 0))
+    #if(($cookieUserNumber.length() > 0) && ($bodyUserName.length() > 0))
     {
         "statusCode": 200
     }

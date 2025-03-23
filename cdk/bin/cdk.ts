@@ -9,9 +9,6 @@ const defaultEnv = {
   region: process.env.CDK_DEFAULT_REGION,
 };
 
-new S3Stack(app, "S3Stack", {
-  env: defaultEnv,
-});
 new MockApiStack(app, "MockApiStack", {
   env: defaultEnv,
 });
